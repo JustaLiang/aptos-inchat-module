@@ -11,13 +11,14 @@ module injoy_labs::chatin_v1 {
     public entry fun register(
         user: signer,
         username: String,
+        description: String,
         uri: String,
         avatar: String,
-        description: String,
     ) {
         profile::register(
             &user,
             username,
+            description,
             uri,
             avatar,
             vector[],
@@ -37,17 +38,14 @@ module injoy_labs::chatin_v1 {
         );
     }
 
-    public entry fun register_with_profile(
-        user: signer,
-        description: String,
-    ) {
+    public entry fun register_with_profile(user: signer) {
         let user_addr = std::signer::address_of(&user);
         let collection_name = get_collection_name(user_addr);
         token::initialize_token_store(&user);
         token::create_collection(
             &user,
             collection_name,
-            description,
+            profile::get_description(user_addr),
             profile::get_uri(user_addr),
             MAX_U64,
             vector[true, true, true],            
