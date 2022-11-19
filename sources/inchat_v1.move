@@ -1,4 +1,4 @@
-module injoy_labs::chatin_v1 {
+module injoy_labs::inchat_v1 {
     use std::string::{Self, String};
     use std::signer;
     use aptos_token::token;
@@ -6,7 +6,7 @@ module injoy_labs::chatin_v1 {
     use injoy_labs::profile;
     
     const MAX_U64: u64 = 0xffffffffffffffff;
-    const PLATFORM_PREFIX: vector<u8> = b"AptosChatinV1: ";
+    const PLATFORM_PREFIX: vector<u8> = b"AptosInChatV1: ";
 
     public entry fun register(
         user: signer,
