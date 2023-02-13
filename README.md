@@ -1,9 +1,11 @@
 # We are Hiring
-Backend Engineer:
+### Backend Engineer:
   - Familiar with using golang, nodejs, java, etc., any back-end languages to build a chat room app which need to support network-wide traffic.
-Software Engineer:
+
+### Software Engineer:
   - Develop InChat SDK to allow more DApps to easily and smoothly integrate InChat on their website.
-Mobile App Engineer:
+
+### Mobile App Engineer:
   - Develop InChat mobile app to let people can use InChat on mobile devices too.
 
 # Aptos InChat Module
